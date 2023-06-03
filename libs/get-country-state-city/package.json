@@ -1,8 +1,11 @@
 {
   "name": "get-country-state-city",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "author": {
     "name": "Sivaraj Rathinam Kandasamy",
     "email": "sivaraj.mca17@gmail.com"
-  }
+  },
+  "files": [
+    "/**"
+  ]
 }
