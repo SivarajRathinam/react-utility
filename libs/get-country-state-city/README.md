@@ -1,53 +1,56 @@
-# get-country-state-city
+# react-country-list
 
 This React library provides utility function and a custom react hooks to fetch country, state and city details
 
 To Install the package use the following command
+
 ```javascript
 
-npm i react-country-state-city
+npm i react-country-list
 
 ```
 
 Get Country details using utility function
 
 ```javascript
+import React, { useState, useEffect } from 'react';
+import { getAllCountries, Icountry, Istate } from 'react-country-list';
 
-import React,{ useState , useEffect } from 'react';
-import {getAllCountries, Icountry, Istate} from 'react-country-state-city'
-
-const App = () =>{
-  const [country,setCountry] = useState('')
-  const [countryList,setCountryList] = useState<Icountry>([])
-  const [stateList,setStateList] = useState<Istate>([])
-  useEffect(()=>{
+const App = () => {
+  const [country, setCountry] = useState('');
+  const [countryList, setCountryList] = useState < Icountry > [];
+  const [stateList, setStateList] = useState < Istate > [];
+  useEffect(() => {
     const countries = getAllCountries();
-    setCountryList(countries)
-  },[])
-  useEffect(()=>{
+    setCountryList(countries);
+  }, []);
+  useEffect(() => {
     const states = getAllStatesAsync(country);
-    setStateList(states)
-  },[country])
-  const handleCountrySelect = ()=>{
-      
-  }
-  return <div>
-            <select>
-              <option>select country</option>
-              {countryList.map((country)=>{
-                  return <option key={country.name} onSelect={handleCountrySelect}>{country.name}</option>
-              })}
-            </select>
-  </div>
-}
-
+    setStateList(states);
+  }, [country]);
+  const handleCountrySelect = () => {};
+  return (
+    <div>
+      <select>
+        <option>select country</option>
+        {countryList.map((country) => {
+          return (
+            <option key={country.name} onSelect={handleCountrySelect}>
+              {country.name}
+            </option>
+          );
+        })}
+      </select>
+    </div>
+  );
+};
 ```
 
 Get Country details using Custom React Hook
 
 ```javascript
 
-import { useGetCountry } from 'react-country-state-city';
+import { useGetCountry } from 'react-country-list';
 import {
   SyntheticEvent,
   useState,
