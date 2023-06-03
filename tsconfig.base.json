@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "get-country-state-city": ["libs/get-country-state-city/src/index.ts"],
+      "@get-country-state-city/json/*": [
+        "libs/get-country-state-city/src/lib/json/*"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
