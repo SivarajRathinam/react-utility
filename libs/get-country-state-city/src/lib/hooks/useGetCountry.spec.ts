@@ -1,8 +1,8 @@
 import { waitFor, renderHook } from '@testing-library/react';
 import useGetCountry from './useGetCountry';
-import AllCountries from '../json/allCountries.json';
-import indiaState from '../json/101/states.json';
-import karnatakaCities from '../json/101/4026/cities.json';
+import AllCountries from '../utils/json/allCountries.json';
+import indiaState from '../utils/json/101/states.json';
+import karnatakaCities from '../utils/json/101/4026/cities.json';
 
 describe('test use get country hook', () => {
   it('test countries are receiving properly', async () => {

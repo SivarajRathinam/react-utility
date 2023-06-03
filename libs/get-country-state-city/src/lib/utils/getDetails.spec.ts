@@ -1,6 +1,6 @@
-import AllCountries from '../json/allCountries.json';
-import IndiaState from '../json/101/states.json';
-import karnatakaCities from '../json/101/4026/cities.json';
+import AllCountries from './json/allCountries.json';
+import IndiaState from './json/101/states.json';
+import karnatakaCities from './json/101/4026/cities.json';
 import {
   getAllCitiesAsync,
   getAllCountries,
