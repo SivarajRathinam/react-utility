@@ -1,0 +1,27 @@
+name: Publish package to NPM 📦
+on:
+  release:
+    types: [published]
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: install
+        run: |
+          npm install
+      - name: build
+        run: |
+          npx nx build get-country-state-city
+      - name: npm publish
+        working-directory: ./dist/libs/get-country-state-city
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        run: |
+          npm publish
