@@ -5,7 +5,7 @@ This React library provides utility function and a custom react hooks to fetch c
 To Install the package use the following command
 ```javascript
 
-npm i get-country-state-city
+npm i react-country-state-city
 
 ```
 
@@ -14,7 +14,7 @@ Get Country details using utility function
 ```javascript
 
 import React,{ useState , useEffect } from 'react';
-import {getAllCountries, Icountry, Istate} from 'get-country-state-city'
+import {getAllCountries, Icountry, Istate} from 'react-country-state-city'
 
 const App = () =>{
   const [country,setCountry] = useState('')
@@ -47,7 +47,7 @@ Get Country details using Custom React Hook
 
 ```javascript
 
-import { useGetCountry } from 'get-country-state-city';
+import { useGetCountry } from 'react-country-state-city';
 import {
   SyntheticEvent,
   useState,
