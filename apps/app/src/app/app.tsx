@@ -1,14 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
 import { useGetCountry } from 'get-country-state-city';
-import NxWelcome from './nx-welcome';
-import {
-  ChangeEvent,
-  ChangeEventHandler,
-  ReactEventHandler,
-  SyntheticEvent,
-  useState,
-} from 'react';
+import { SyntheticEvent, useState } from 'react';
 
 export function App() {
   const [country, setCountry] = useState<string>('');
@@ -31,7 +23,6 @@ export function App() {
   };
   return (
     <div>
-      {/* <NxWelcome title="app" /> */}
       <select
         placeholder="select country"
         onChange={(e: SyntheticEvent<HTMLSelectElement>) =>
