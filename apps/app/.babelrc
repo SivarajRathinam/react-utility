@@ -4,6 +4,17 @@
       "@nx/react/babel",
       {
         "runtime": "automatic"
+      },
+      "@nx/web/babel",
+      {
+        "useBuiltIns": "usage",
+        "decorators": {
+          "decoratorsBeforeExport": true,
+          "legacy": false
+        },
+        "classProperties": {
+          "loose": false
+        }
       }
     ]
   ],
