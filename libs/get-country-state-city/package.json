@@ -1,11 +1,14 @@
 {
   "name": "react-country-list",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": {
     "name": "Sivaraj Rathinam Kandasamy",
     "email": "sivaraj.mca17@gmail.com"
   },
   "files": [
     "/**"
-  ]
+  ],
+  "dependencies": {
+    "core-js": "^3.30.2"
+  }
 }
